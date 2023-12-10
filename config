@@ -1,0 +1,127 @@
+[
+  {
+    "backlight": {
+      "format": "{percent}% {icon}",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "battery": {
+      "states": {
+        "critical": 5,
+        "good": 65,
+        "warning": 45
+      }
+    },
+    "clock": {
+      "format": "{:%H\n%M}\n",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>\n"
+    },
+    "custom/code": {
+      "format": "code",
+      "on-click": "codium",
+      "tooltip": false
+    },
+    "custom/firefox": {
+      "format": "firefox",
+      "on-click": "firefox",
+      "tooltip": false
+    },
+    "custom/hex": {
+      "format": "hex",
+      "on-click": "hyprpicker | wl-copy",
+      "tooltip": false
+    },
+    "custom/menu": {
+      "format": " ",
+      "on-click": "rofi -show drun",
+      "tooltip": false
+    },
+    "custom/powermenu": {
+      "format": "⏻ ",
+      "on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu",
+      "tooltip": false
+    },
+    "custom/term": {
+      "format": "term",
+      "on-click": "foot",
+      "tooltip": false
+    },
+    "custom/wifi": {
+      "format": "wifi",
+      "on-click": "~/rofi-wifi-menu.sh",
+      "tooltip": false
+    },
+    "height": 900,
+    "hyprland/workspaces": {
+      "active-only": true,
+      "all-outputs": true,
+      "format": "{icon}",
+      "format-icons": {
+        "1": "一",
+        "10": "十",
+        "2": "二",
+        "3": "三",
+        "4": "四",
+        "5": "五",
+        "6": "六",
+        "7": "七",
+        "8": "八",
+        "9": "九"
+      },
+      "on-click": "activate"
+    },
+    "layer": "top",
+    "margin-bottom": 50,
+    "margin-left": 5,
+    "margin-right": 5,
+    "margin-top": 50,
+    "modules-center": [
+      "custom/hex",
+      "custom/wifi",
+      "custom/term",
+      "custom/code",
+      "custom/firefox"
+    ],
+    "modules-left": [
+      "custom/menu",
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "clock",
+      "backlight",
+      "pulseaudio",
+      "battery",
+      "custom/powermenu"
+    ],
+    "output": "eDP-1",
+    "position": "right",
+    "pulseaudio": {
+      "pulseaudio": {
+        "format": "{icon}",
+        "format-icons": {
+          "default": [
+            "",
+            "",
+            ""
+          ]
+        },
+        "format-muted": "󰝟",
+        "on-click": "pavucontrol",
+        "scroll-step": 5,
+        "tooltip": true,
+        "tooltip-format": "{volume}"
+      }
+    },
+    "spacing": 2,
+    "width": 45
+  }
+]

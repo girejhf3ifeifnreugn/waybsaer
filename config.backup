@@ -1,0 +1,105 @@
+{
+    "layer": "bottom",
+    "position": "right",
+    "height": 900,
+    "width": 45,
+    "modules-left": ["custom/menu", "hyprland/workspaces"],
+    "spacing": 2,
+    "output": "eDP-1",
+    "modules-center": ["custom/hex", "custom/wifi", "custom/term", "custom/code", "custom/firefox"],
+    "modules-right": ["clock", "battery", "backlight", "pulseaudio", "custom/powermenu"],
+    "margin": "50 5 50 5",
+
+    "custom/wifi": {
+        "format": "wifi",
+        "on-click": "~/rofi-wifi-menu.sh",
+        "tooltip": false,
+        },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "active-only": true,
+        "format": "{icon}",
+        "persistant_workspaces": {
+            "1": ["eDP-1"],
+            "2": ["eDP-1"],
+            "3": ["eDP-1"], // Always show a workspace with name '3', on all outputs if it does not exists
+            "4": ["eDP-1"], // Always show a workspace with name '4', on output 'eDP-1' if it does not exists
+            "5": ["eDP-1"], // Always show a workspace with name '5', on outputs 'eDP-1' and 'DP-2' if it does not exists
+            "6": ["eDP-1"],
+            "7": ["eDP-1"],
+            "8": ["eDP-1"],
+            "9": ["eDP-1"],
+            "10": ["eDP-1"],
+         },
+       "format-icons": {
+        "1": "一",
+        "2": "二",
+        "3": "三",
+        "4": "四",
+        "5": "五",
+        "6": "六",
+        "7": "七",
+        "8": "八",
+        "9": "九",
+        "10": "十",
+         },
+        },
+
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+    },
+
+    "custom/powermenu": {
+        "format": "⏻ ",
+        "on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu",
+        "tooltip": false,
+        },
+
+        "custom/hex": {
+            "format": "hex",
+            "on-click": "hyprpicker | wl-copy",
+            "tooltip": false,
+            },
+
+    "custom/menu": {
+"format": " ",
+"tooltip": false,
+"on-click": "rofi -show drun",
+},
+
+"custom/firefox": {
+    "format": "firefox",
+    "tooltip": false,
+    "on-click": "firefox",
+    },
+
+"custom/term": {
+    "format": "term",
+    "on-click": "foot",
+    "tooltip": false,
+    },
+
+    "custom/code": {
+        "format": "code",
+        "on-click": "codium",
+        "tooltip": false,
+        },
+
+"clock": {
+    "tooltip-format": "{:%H
+                        %M}",
+},
+
+"battery": {
+    "states": {
+        "good": 65,
+        "warning": 45,
+        "critical": 5
+    },
+  }, 
+
+}
